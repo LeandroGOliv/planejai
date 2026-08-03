@@ -3,7 +3,7 @@ function App() {
     <>
       <p>wip</p>
     </>
-  );
+  )
 }
 
-export default App;
+export default App
