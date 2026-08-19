@@ -8,13 +8,15 @@ interface ContentProps {
 
 function Paragraph({ children }: PropsWithChildren) {
   return (
-    <p className="text-muted-foreground text-sm leading-relaxed">{children}</p>
+    <p className="text-muted-foreground text-base leading-relaxed">
+      {children}
+    </p>
   )
 }
 
 function SectionTitle({ children }: PropsWithChildren) {
   return (
-    <h3 className="text-foreground mt-5 mb-1.5 text-sm leading-relaxed font-semibold">
+    <h3 className="text-foreground mt-5 mb-1.5 text-base leading-relaxed font-semibold">
       {children}
     </h3>
   )
@@ -22,7 +24,7 @@ function SectionTitle({ children }: PropsWithChildren) {
 
 function OrderedList({ items }: { items: string[] }) {
   return (
-    <ol className="text-muted-foreground ml-6 list-decimal text-sm leading-relaxed">
+    <ol className="text-muted-foreground ml-6 list-decimal text-base leading-relaxed">
       {items.map((item, index) => (
         <li key={index} className="pl-1">
           {item}
@@ -53,10 +55,10 @@ export function Content({ insight }: ContentProps) {
   const status = statusStyles[insight.feasibility.status] ?? null
 
   return (
-    <div className="lg:max-h-93 lg:scrollbar-thin lg:[scrollbar-color:var(--border)_transparent] lg:overflow-y-auto lg:pr-2">
+    <div>
       <section className="flex flex-col gap-2">
         <div className="flex flex-col items-start gap-2 sm:flex-row">
-          <span className="text-foreground text-sm font-semibold">
+          <span className="text-foreground text-base font-semibold">
             🎯 Viabilidade da Meta
           </span>
           {status && (

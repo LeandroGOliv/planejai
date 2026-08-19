@@ -93,8 +93,16 @@ export type SimulationFormData = Record<
   string
 >
 
+// 'model' é o nome de papel usado pela própria API do Gemini
+export interface ChatMessage {
+  id: string
+  role: 'user' | 'model'
+  content: string
+}
+
 export type SimulationRecord = SimulationFormData & {
   id: string
   createdAt?: string
   insight?: InsightData
+  conversation?: ChatMessage[]
 }

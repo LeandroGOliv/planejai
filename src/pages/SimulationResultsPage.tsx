@@ -8,7 +8,7 @@ import {
 } from 'lucide-react'
 import { useParams } from 'react-router-dom'
 
-import { AIInsightsCard } from '@/components/features/SimulationResults/AiInsightCardProps'
+import { AIInsightsCard } from '@/components/features/SimulationResults/AIInsightsCard'
 import { Card } from '@/components/features/SimulationResults/Card'
 import { PageHero } from '@/components/shared/PageHero'
 import { useSimulationStorage } from '@/hooks/useSimulationStorage'
